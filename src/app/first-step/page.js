@@ -1,7 +1,7 @@
 import { Code } from '@/components/code'
 import Head from 'next/head'
 
-export default function FisrtStep() {
+export default async function FirstStep() {
     return (
         <>
             <Head>
@@ -16,9 +16,7 @@ export default function FisrtStep() {
                 <p>A biblioteca <strong>rna.js</strong> pode ser usada tanto em paginas web estáticas quanto em aplicações <a href="">node</a>.</p>
                 <h3>Páginas Web</h3>
                 <p>Para instalar em páginas web, ou seja, no frontend, adicione a seguinte linha de código á tag head do seu html:</p>
-                <code>
-                    <Code code={'<script src="https://rnajs.vercel.app/api/rna"></script>'} lang="html"></Code>
-                </code>
+                <Code code={'<script src="https://rnajs.vercel.app/api/lib"></script>'} lang="html"></Code>
             </div>
         </>
     )

@@ -1,11 +1,11 @@
-import '@/styles/globals.css'
-import Link from 'next/link'
-import Script from 'next/script'
-import { useRef, useState } from 'react'
+'use client'
+import '../styles/globals.css'
+import Link from "next/link";
+import { useRef } from "react";
 
-export default function App({ Component, pageProps }) {
+export default function RootLayout({children}) {
   const docNavSwitcherRef = useRef({})
-        
+
   return (
     <main>
       <header>
@@ -17,17 +17,18 @@ export default function App({ Component, pageProps }) {
           <ul>
             {
               [
-                {label: "Sobre", url: "/"},
-                {label: "Primeiros passos", url: "/first-step"}
+                { label: "Sobre", url: "/" },
+                { label: "Primeiros passos", url: "/first-step" }
               ].map(item => {
-                return <li><Link onClick={() => {docNavSwitcherRef.current.checked = false;}} href={item.url}>{item.label}</Link></li>
+                return <li><Link onClick={() => { docNavSwitcherRef.current.checked = false; }} href={item.url}>{item.label}</Link></li>
               })
             }
           </ul>
         </div>
       </header>
       <div>
-        <Component {...pageProps} />
+        {/* <Component {...pageProps} /> */}
+        {children}
       </div>
       <footer>
         <a href='https://github.com/Raffa064/'>Raffa064</a>
