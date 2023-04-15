@@ -1,5 +1,6 @@
-import { Code } from '@/components/code'
+import { CodePreview } from '@/components/code-preview'
 import Head from 'next/head'
+import Link from 'next/link'
 
 export default async function FirstStep() {
     return (
@@ -11,12 +12,15 @@ export default async function FirstStep() {
                 <link rel="icon" href="/favicon.ico" />
                 {/* <script src="https://unpkg.com/shiki"></script> */}
             </Head>
-            <div>
+            <div id="page-container">
                 <h2>Instalação e importação</h2>
-                <p>A biblioteca <strong>rna.js</strong> pode ser usada tanto em paginas web estáticas quanto em aplicações <a href="">node</a>.</p>
+                <p>A biblioteca <strong>rna.js</strong> pode ser usada tanto em paginas web estáticas quanto em aplicações <a href="https://nodejs.org/en/about">node</a>.</p>
                 <h3>Páginas Web</h3>
                 <p>Para instalar em páginas web, ou seja, no frontend, adicione a seguinte linha de código á tag head do seu html:</p>
-                <Code code={'<script src="https://rnajs.vercel.app/api/lib"></script>'} lang="html"></Code>
+                <CodePreview code={'<script src="https://rnajs.vercel.app/api/lib"></script>'} lang="html"></CodePreview>
+                <p>Após isso, todas as funções da biblioteca ficaram disponíveis.</p>
+                <h3>Aplicações Node.js</h3>
+                <p>Para utilizar a biblioteca <strong>rna.js</strong> em aplicações <a href="https://nodejs.org/en/about">node</a>, baixe o arquivo da biblioteca em <Link href="/api/lib" download='rna.js' type='text/javascript'>nossa api</Link></p>
             </div>
         </>
     )
