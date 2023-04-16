@@ -1,0 +1,3 @@
+GET http://localhost:3000/api/lib
+
+GET https://rnajs.vercel.app/api/lib
