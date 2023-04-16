@@ -1,5 +1,3 @@
-import { NextResponse } from "next/server"
-
 export async function GET() {
     const request = await fetch("https://raw.githubusercontent.com/Raffa064/rna.js/main/rna.js")
     const libCode = await request.text()

@@ -1,6 +1,6 @@
-import { CodePreview } from '@/components/code-preview'
 import Head from 'next/head'
 import Link from 'next/link'
+import { CodePreview } from '../components/code-preview'
 
 export default async function FirstStep() {
     return (

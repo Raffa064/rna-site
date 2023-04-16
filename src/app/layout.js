@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function RootLayout({ children }) {
   return (
-    <>
+    <div>
       <input id="doc-nav-switcher" type="checkbox"/>
       <main>
         <header>
@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
                   { label: "Sobre", url: "/" },
                   { label: "Primeiros passos", url: "/first-step" }
                 ].map(item => {
-                  return <li key={Math.random()}><Link href={item.url}>{item.label}</Link></li>
+                  return <li><Link href={item.url}>{item.label}</Link></li>
                 })
               }
             </ul>
@@ -32,6 +32,6 @@ export default function RootLayout({ children }) {
           <a href='https://raffa064.github.io/rna.js'>Show case</a>
         </footer>
       </main>
-    </>
+    </div>
   )
 }

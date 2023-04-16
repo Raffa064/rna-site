@@ -1,18 +1,18 @@
-'use client'
+'use client';
 
-import { useState } from "react"
+import { useState } from "react";
 
 export function CodeBlock({raw, preview}) {
     const [hasCopied, setHasCopied] = useState(false)
     
-    function handleCopyToClipboard() {
+    const handleCopyToClipboard = () => {
+        navigator.clipboard.writeText(raw)
         setHasCopied(true)
     }
 
     return (
         <div className="code-block">
-            <h1>{''+hasCopied}</h1>
-            <p onClick={() => setHasCopied(true)}>{'teste'+hasCopied}</p>
+            <button onClick={handleCopyToClipboard}>Copiar {""+hasCopied}</button>
             <div dangerouslySetInnerHTML={{__html: preview}}></div>
         </div>
     )
