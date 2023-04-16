@@ -23,7 +23,8 @@ export function PageLayout({children}) {
                         {
                             [
                                 { label: "Sobre", url: "/" },
-                                { label: "Primeiros passos", url: "/first-step" }
+                                { label: "Primeiros passos", url: "/first-step" },
+                                { label: "Simulação", url: "/simulation" },
                             ].map(item => {
                                 return <li><Link href={item.url} onClick={hideDocNavContainer}>{item.label}</Link></li>
                             })
