@@ -89,6 +89,7 @@ main > header > label {
   opacity: 0%;
   animation: close-doc 1s forwards;
   overflow: scroll;
+  z-index: 4;
 }
 
 #doc-nav-switcher:checked + main > header > #doc-nav-container {
